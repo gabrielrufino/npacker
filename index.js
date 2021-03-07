@@ -10,8 +10,6 @@ const { promisify } = require('util')
 async function main() {
   const [,, command, file] = process.argv
 
-  console.log(command, file)
-
   if (command === 'pack') {
     const gzip = zlib.createGzip()
     const source = fs.createReadStream(file)
