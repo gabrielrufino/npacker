@@ -8,22 +8,22 @@ const zlib = require('zlib')
 const { promisify } = require('util')
 
 async function main() {
-  const [,, command, file] = process.argv
+  const [,, operation, file] = process.argv
 
-  if (command === 'pack') {
+  if (operation === 'pack') {
     const gzip = zlib.createGzip()
     const source = fs.createReadStream(file)
     const destination = fs.createWriteStream(`${file}.gz`)
 
     await promisify(stream.pipeline)(source, gzip, destination)
-  } else if (command === 'unpack') {
+  } else if (operation === 'unpack') {
     const unzip = zlib.createUnzip()
     const source = fs.createReadStream(file)
     const destination = fs.createWriteStream(file.replace('.gz', ''))
 
     await promisify(stream.pipeline)(source, unzip, destination)
   } else {
-    console.error('Invalid command')
+    console.error('Invalid operation')
   }
 }
 
