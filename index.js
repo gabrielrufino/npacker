@@ -14,13 +14,14 @@ async function main() {
     const gzip = zlib.createGzip()
     const source = fs.createReadStream(file)
     const destination = fs.createWriteStream(`${file}.gz`)
-  
+
     await promisify(stream.pipeline)(source, gzip, destination)
   } else if (command === 'unpack') {
-    const buffer = await promisify(fs.readFile)(file)
-    const unpacked = await promisify(zlib.unzip)(buffer)
+    const unzip = zlib.createUnzip()
+    const source = fs.createReadStream(file)
+    const destination = fs.createWriteStream(file.replace('.gz', ''))
 
-    await promisify(fs.writeFile)(file.replace('.gz', ''), unpacked)
+    await promisify(stream.pipeline)(source, unzip, destination)
   } else {
     console.error('Invalid command')
   }
