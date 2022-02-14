@@ -11,14 +11,14 @@ async function main() {
   const [,, operation, file] = process.argv
 
   if (operation === 'pack') {
-    const gzip = zlib.createGzip()
     const source = fs.createReadStream(file)
+    const gzip = zlib.createGzip()
     const destination = fs.createWriteStream(`${file}.gz`)
 
     await promisify(stream.pipeline)(source, gzip, destination)
   } else if (operation === 'unpack') {
-    const unzip = zlib.createUnzip()
     const source = fs.createReadStream(file)
+    const unzip = zlib.createUnzip()
     const destination = fs.createWriteStream(file.replace('.gz', ''))
 
     await promisify(stream.pipeline)(source, unzip, destination)
