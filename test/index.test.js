@@ -1,8 +1,7 @@
 const { deepStrictEqual } = require('assert')
 const { execSync } = require('child_process')
-const { join } = require('path')
 
-const exec = command => execSync(command, { cwd: join(__dirname, 'test') }).toString()
+const exec = command => execSync(command, { cwd: __dirname }).toString()
 
 console.time('Test took')
 

@@ -7,7 +7,7 @@
     "npacker": "src/index.js"
   },
   "scripts": {
-    "test": "node index.test.js"
+    "test": "node test/index.test.js"
   },
   "repository": {
     "type": "git",
