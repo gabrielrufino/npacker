@@ -7,7 +7,7 @@ Compressor de arquivos feito com Node.js
 ```bash
 $ git clone https://github.com/gabrielrufino/npacker
 $ cd npacker
-$ npm ci && npm link
+$ npm link
 ```
 
 ## Comprimir & Descomprimir
