@@ -2,9 +2,9 @@
   "name": "npacker",
   "version": "1.0.0",
   "description": "Compressor de arquivos feito com Node.js",
-  "main": "index.js",
+  "main": "src/index.js",
   "bin": {
-    "npacker": "index.js"
+    "npacker": "src/index.js"
   },
   "scripts": {
     "test": "node index.test.js"
