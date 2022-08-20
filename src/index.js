@@ -7,8 +7,18 @@ const stream = require('stream')
 const zlib = require('zlib')
 const { promisify } = require('util')
 
+const ArgumentRequiredException = require('./exceptions/ArgumentRequiredException')
+
 async function main() {
   const [,, operation, file] = process.argv
+
+  if (!operation) {
+    throw new ArgumentRequiredException('operation')
+  }
+
+  if (!file) {
+    throw new ArgumentRequiredException('file')
+  }
 
   if (operation === 'pack') {
     const source = fs.createReadStream(file)
