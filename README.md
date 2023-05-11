@@ -5,17 +5,17 @@ Compressor de arquivos feito com Node.js
 ## Como instalar?
 
 ```bash
-$ git clone https://github.com/gabrielrufino/npacker
-$ cd npacker
-$ npm link
+git clone https://github.com/gabrielrufino/npacker
+cd npacker
+npm link
 ```
 
 ## Comprimir & Descomprimir
 
 ```bash
-$ npacker pack test.txt
+npacker pack test.txt
 ```
 
 ```bash
-$ npacker unpack test.txt.gz
+npacker unpack test.txt.gz
 ```
