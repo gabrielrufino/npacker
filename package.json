@@ -1,13 +1,16 @@
 {
   "name": "npacker",
   "private": true,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Compressor de arquivos feito com Node.js",
   "main": "src/index.js",
   "bin": {
     "npacker": "src/index.js"
   },
   "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "reinstall": "rimraf node_modules && npm ci",
     "test": "node test/index.test.js"
   },
   "repository": {
@@ -19,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/gabrielrufino/npacker/issues"
   },
-  "homepage": "https://github.com/gabrielrufino/npacker#readme"
+  "homepage": "https://github.com/gabrielrufino/npacker#readme",
+  "devDependencies": {
+    "@gabrielrufino/eslint-config": "^1.5.1",
+    "eslint": "^8.49.0",
+    "rimraf": "^5.0.1"
+  }
 }
