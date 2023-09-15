@@ -9,6 +9,7 @@
   },
   "scripts": {
     "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
     "test": "node test/index.test.js"
   },
   "repository": {
