@@ -8,6 +8,7 @@
     "npacker": "src/index.js"
   },
   "scripts": {
+    "lint": "eslint .",
     "test": "node test/index.test.js"
   },
   "repository": {
@@ -19,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/gabrielrufino/npacker/issues"
   },
-  "homepage": "https://github.com/gabrielrufino/npacker#readme"
+  "homepage": "https://github.com/gabrielrufino/npacker#readme",
+  "devDependencies": {
+    "@gabrielrufino/eslint-config": "^1.5.1",
+    "eslint": "^8.49.0"
+  }
 }
