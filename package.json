@@ -10,6 +10,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
+    "reinstall": "rimraf node_modules && npm ci",
     "test": "node test/index.test.js"
   },
   "repository": {
