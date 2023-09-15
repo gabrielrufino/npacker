@@ -24,6 +24,7 @@
   "homepage": "https://github.com/gabrielrufino/npacker#readme",
   "devDependencies": {
     "@gabrielrufino/eslint-config": "^1.5.1",
-    "eslint": "^8.49.0"
+    "eslint": "^8.49.0",
+    "rimraf": "^5.0.1"
   }
 }
