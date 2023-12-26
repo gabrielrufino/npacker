@@ -4,14 +4,14 @@ on:
   - push
 
 jobs:
-  test:
+  node-ci:
+    name: Node CI
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [10, 12, 14, 16, 18, 20]
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: gabrielrufino/node-ci@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm test
