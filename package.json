@@ -1,7 +1,7 @@
 {
   "name": "npacker",
   "private": true,
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Compressor de arquivos feito com Node.js",
   "main": "src/index.js",
   "bin": {
@@ -24,6 +24,6 @@
   "homepage": "https://github.com/gabrielrufino/npacker#readme",
   "devDependencies": {
     "@gabrielrufino/eslint-config": "^1.6.0",
-    "eslint": "^8.57.0"
+    "eslint": "^8.57.1"
   }
 }
